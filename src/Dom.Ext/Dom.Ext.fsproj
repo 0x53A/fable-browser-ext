@@ -20,6 +20,7 @@
     <Compile Include="Document.fs" />
     <Compile Include="Element.fs" />
     <Compile Include="HTMLElement.fs" />
+    <Compile Include="Window.fs" />
     <Content Include="Notes.txt" />
   </ItemGroup>
   <ItemGroup />
