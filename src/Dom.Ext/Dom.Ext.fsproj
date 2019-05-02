@@ -21,7 +21,7 @@
     <Compile Include="Element.fs" />
     <Compile Include="HTMLElement.fs" />
     <Compile Include="Window.fs" />
-    <Content Include="Notes.txt" />
+    <None Include="Notes.txt" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
