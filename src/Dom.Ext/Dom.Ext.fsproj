@@ -16,8 +16,12 @@
     
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Browser.Dom.Ext.fs" />
+    <Compile Include="GlobalEventHandlers.fs" />
+    <Compile Include="Document.fs" />
+    <Compile Include="Element.fs" />
+    <Content Include="Notes.txt" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <PackageReference Include="Fable.Core" Version="3.0.0" />
     <PackageReference Include="Fable.Browser.Dom" Version="1.0.0" />

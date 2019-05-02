@@ -1,5 +1,5 @@
 [<AutoOpen>]
-module Browser.DomExtensions
+module Browser.DomExtensions_Document
 
 open Fable.Core
 open Browser.Types
@@ -50,16 +50,8 @@ type Document with
     [<Emit("$0.addEventListener('pause',$1...)")>] member __.addEventListener_pause(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('play',$1...)")>] member __.addEventListener_play(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('playing',$1...)")>] member __.addEventListener_playing(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointercancel',$1...)")>] member __.addEventListener_pointercancel(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointerdown',$1...)")>] member __.addEventListener_pointerdown(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointerenter',$1...)")>] member __.addEventListener_pointerenter(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointerleave',$1...)")>] member __.addEventListener_pointerleave(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('pointerlockchange',$1...)")>] member __.addEventListener_pointerlockchange(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('pointerlockerror',$1...)")>] member __.addEventListener_pointerlockerror(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointermove',$1...)")>] member __.addEventListener_pointermove(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointerout',$1...)")>] member __.addEventListener_pointerout(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointerover',$1...)")>] member __.addEventListener_pointerover(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('pointerup',$1...)")>] member __.addEventListener_pointerup(listener: (PointerEvent -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('progress',$1...)")>] member __.addEventListener_progress(listener: (ProgressEvent -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('ratechange',$1...)")>] member __.addEventListener_ratechange(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('readystatechange',$1...)")>] member __.addEventListener_readystatechange(listener: (ProgressEvent -> unit), ?useCapture: bool): unit = jsNative
@@ -82,7 +74,6 @@ type Document with
     [<Emit("$0.addEventListener('waiting',$1...)")>] member __.addEventListener_waiting(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('webkitfullscreenchange',$1...)")>] member __.addEventListener_webkitfullscreenchange(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
     [<Emit("$0.addEventListener('webkitfullscreenerror',$1...)")>] member __.addEventListener_webkitfullscreenerror(listener: (Event -> unit), ?useCapture: bool): unit = jsNative
-    [<Emit("$0.addEventListener('wheel',$1...)")>] member __.addEventListener_wheel(listener: (WheelEvent -> unit), ?useCapture: bool): unit = jsNative
 
     [<Emit("$0.createElement('a')")>] member __.createElement_a(): HTMLAnchorElement = jsNative
     [<Emit("$0.createElement('abbr')")>] member __.createElement_abbr(): HTMLPhraseElement = jsNative
@@ -365,3 +356,4 @@ type Document with
     [<Emit("$0.getElementsByTagName('wbr')")>] member __.getElementsByTagName_wbr(): NodeListOf<HTMLElement> = jsNative
     // [<Emit("$0.getElementsByTagName('x-ms-webview')")>] member __.``(): ``: unit -> NodeListOf<MSHTMLWebViewElement> = jsNative
     [<Emit("$0.getElementsByTagName('xmp')")>] member __.getElementsByTagName_xmp(): NodeListOf<HTMLBlockElement> = jsNative
+

@@ -1,0 +1,10 @@
+﻿
+The old Browser bindings are here: https://github.com/fable-compiler/fable-import/blob/master/Browser/Fable.Import.Browser.fs
+
+I used the following regex replacements:
+
+abstract getElementsByTagName_([a-zA-Z0-9]*): unit -> (.*)$
+member __.getElementsByTagName_$1() : $2 = jsNative
+
+abstract addEventListener_([a-zA-Z]*): listener: \(([a-zA-Z]*) -> 'Out\) \* \?useCapture: bool -> unit
+member __.addEventListener_$1(listener: ($2 -> 'Out), ?useCapture: bool) = jsNative
